@@ -2,10 +2,10 @@ import { storiesOf } from "@storybook/react";
 import React from "react";
 import Button from "../src/Button";
 import Checkbox from "../src/Checkbox";
-import { Box } from "../src/Layout";
 import List from "../src/List";
 import Radio, { RadioButtonGroup, RadioGroup } from "../src/Radio";
 import Switch from "../src/Switch";
+import Box from "../src/Box";
 
 const stories = storiesOf("Controls", module);
 

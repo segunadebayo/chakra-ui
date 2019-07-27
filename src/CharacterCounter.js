@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef, useState } from "react";
 import Input from "./Input";
-import { Box } from "./Layout";
+import Box from "./Box";
 
 const CharacterCounter = forwardRef(
   (

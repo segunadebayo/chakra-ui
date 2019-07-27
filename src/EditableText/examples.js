@@ -4,7 +4,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import EditableText, { EditableInput, EditablePreview } from "../EditableText";
-import { Box } from "../Layout";
+import Box from "../Box";
 
 const stories = storiesOf("EditableText", module);
 stories.addDecorator(withKnobs);

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import propTypes from "prop-types";
-import { Box } from "../Layout";
 import badgeStyle from "./styles";
 import { useTheme, useUIMode } from "../ThemeProvider";
+import Box from "../Box";
 
 const Badge = ({ color, variant, ...props }) => {
   const { mode } = useUIMode();

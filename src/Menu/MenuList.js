@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Popper } from "react-popper";
-import { Box } from "../Layout";
 import { assignRef } from "../utils";
 import { useMenuContext } from "./Menu";
 import { generateDarkElevation } from "../theme/colors.utils";
+import Box from "../Box";
 
 export const MenuList = props => {
   const {

@@ -4,7 +4,7 @@ import Drawer, { DrawerBody, DrawerFooter, DrawerHeader } from ".";
 import Button from "../Button";
 import FormControl from "../FormControl";
 import Input from "../Input";
-import { Box } from "../Layout";
+import Box from "../Box";
 
 const stories = storiesOf("Drawer", module);
 stories.addDecorator(story => {

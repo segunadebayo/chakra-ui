@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { Box } from "../Layout";
 import Text from "../Text";
+import Box from "../Box";
 
 export const MenuGroup = ({ children, title, ...rest }) => (
   <Box role="presentation">

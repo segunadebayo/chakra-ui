@@ -3,8 +3,9 @@ import { jsx, ThemeContext } from "@emotion/core";
 import { storiesOf } from "@storybook/react";
 import { useContext } from "react";
 import Icon from "../src/Icon";
-import { Box, Flex } from "../src/Layout";
 import Text from "../src/Text";
+import Flex from "../src/Flex";
+import Box from "../src/Box";
 
 const stories = storiesOf("Primitives", module);
 

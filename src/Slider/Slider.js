@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { forwardRef, useRef, useState, useCallback } from "react";
-import { Box } from "../Layout";
 import useSliderStyle from "./SliderStyle";
+import Box from "../Box";
 
 function valueToPercent(value, min, max) {
   return ((value - min) * 100) / (max - min);

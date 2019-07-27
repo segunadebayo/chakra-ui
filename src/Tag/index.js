@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import Icon from "../Icon";
-import { Box } from "../Layout";
 import useBadgeStyle from "../Badge/BadgeStyle";
+import Box from "../Box";
 
 let tabSize = "24px";
 

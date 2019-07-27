@@ -3,9 +3,10 @@ import { css, jsx } from "@emotion/core";
 import { func, node, oneOfType, string } from "prop-types";
 import { forwardRef } from "react";
 import Icon from "../Icon";
-import { Box, Flex } from "../Layout";
 import { useTheme, useUIMode } from "../ThemeProvider";
 import { useMenuContext } from "./Menu";
+import Flex from "../Flex";
+import Box from "../Box";
 
 const baseStyle = css({
   width: "100%",

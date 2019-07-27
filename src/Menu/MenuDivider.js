@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { Box } from "../Layout";
+import Box from "../Box";
 
 export const MenuDivider = props => (
   <Box

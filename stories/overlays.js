@@ -5,7 +5,6 @@ import FormControl from "../src/FormControl";
 import Input from "../src/Input";
 import Button, { ActionButtons } from "../src/Button";
 import { Component } from "../src/Component";
-import { Box } from "../src/Layout";
 import Drawer, { DrawerHeader, DrawerBody, DrawerFooter } from "../src/Drawer";
 import Popover from "../src/Popover";
 import {
@@ -14,6 +13,7 @@ import {
   PopoverFooter
 } from "../src/Popover/components";
 import Tooltip from "../src/Tooltip";
+import Box from "../src/Box";
 
 const stories = storiesOf("Overlays", module);
 stories.addDecorator(story => {

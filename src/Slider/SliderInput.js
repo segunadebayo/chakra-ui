@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Children, cloneElement, useRef, useState } from "react";
-import { Flex } from "../Layout";
+import Flex from "../Flex";
 
 const SliderInput = ({
   defaultValue,

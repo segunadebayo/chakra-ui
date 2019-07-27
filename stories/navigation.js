@@ -6,8 +6,8 @@ import { storiesOf } from "@storybook/react";
 import React from "react";
 import Breadcrumbs, { BreadcrumbItem } from "../src/Breadcrumb";
 import Icon from "../src/Icon";
-import { Box } from "../src/Layout";
 import Tabs, { Tab, TabList, TabPanel, TabPanels } from "../src/Tabs";
+import Box from "../src/Box";
 
 const stories = storiesOf("Navigation", module);
 stories.addDecorator(withKnobs);

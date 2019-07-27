@@ -1,8 +1,8 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import Button from "../Button";
-import { Box } from "../Layout";
 import Tooltip from "../Tooltip";
+import Box from "../Box";
 
 const stories = storiesOf("Tooltips", module);
 stories.addDecorator(story => {

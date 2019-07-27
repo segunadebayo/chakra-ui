@@ -1,6 +1,5 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
-import Button from "../src/Button";
 import Menu, {
   MenuButton,
   MenuDivider,
@@ -9,7 +8,7 @@ import Menu, {
   MenuList
 } from "../src/Menu";
 import { MenuItemOption, MenuOptionsGroup } from "../src/Menu/MenuOption";
-import { Box } from "../src/Layout";
+import Box from "../src/Box";
 
 const stories = storiesOf("Menu", module).addDecorator(story => (
   <Box maxWidth="md" mx="auto" mt={4}>

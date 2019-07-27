@@ -10,7 +10,6 @@ import AvatarItem, {
 } from "../src/Avatar/AvatarItem";
 import Badge from "../src/Badge";
 import Icon from "../src/Icon";
-import { Box } from "../src/Layout";
 import List from "../src/List";
 import Progress from "../src/Progress";
 import {
@@ -24,6 +23,7 @@ import {
 import Tag from "../src/Tag";
 import PseudoBox from "../src/PseudoBox";
 import Embed from "../src/Embed";
+import Box from "../src/Box";
 
 const stories = storiesOf("Data Display", module);
 stories.addDecorator(withKnobs);
