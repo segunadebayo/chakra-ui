@@ -6,12 +6,12 @@ interface IActionButtons extends ICommonProps {
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
    */
-  submitText: string;
+  submitText?: string;
   /**
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
    */
-  submitColor: string;
+  submitColor?: string;
   /**
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
@@ -21,7 +21,7 @@ interface IActionButtons extends ICommonProps {
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
    */
-  cancelText: string;
+  cancelText?: string;
   /**
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
@@ -31,12 +31,12 @@ interface IActionButtons extends ICommonProps {
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
    */
-  type: "button" | "submit";
+  type?: "button" | "submit";
   /**
    * If `true`, disables the accordion header.
    * Note: Pass `_disabled` prop to style the disabled state.
    */
-  spacing: string;
+  spacing?: string;
 }
 
 export type ActionButtonsProps = IActionButtons &

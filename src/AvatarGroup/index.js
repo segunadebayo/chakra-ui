@@ -6,7 +6,7 @@ import { avatarSizes } from "../Avatar/styles";
 import Flex from "../Flex";
 import { useUIMode } from "../ThemeProvider";
 
-export const MoreIndicator = ({ src, size, label, ...props }) => {
+export const MoreIndicator = ({ size, label, ...props }) => {
   const borderColor = { light: "#fff", dark: "gray.900" };
   const bg = { light: "gray.200", dark: "alpha.400" };
 

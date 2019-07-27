@@ -40,7 +40,7 @@ const getInitials = name => {
   }
 };
 
-const AvatarName = ({ name, size, ...props }) => {
+const AvatarName = ({ name, ...props }) => {
   return (
     <Box
       textAlign="center"

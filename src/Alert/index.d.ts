@@ -3,8 +3,8 @@ import { IconProps } from "../Icon";
 import { FC } from "react";
 
 interface IAlert {
-  status: "error" | "success" | "warning" | "info";
-  variant: "subtle" | "solid" | "left-accent" | "top-accent" | "card";
+  status?: "error" | "success" | "warning" | "info";
+  variant?: "subtle" | "solid" | "left-accent" | "top-accent" | "card";
 }
 
 export const AlertTitle: FC<BoxProps>;
