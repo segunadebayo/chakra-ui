@@ -1,10 +1,10 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
+import useToast from ".";
 import Button from "../Button";
-import Tooltip from "../Tooltip";
-import Box from "../Box";
+import { Box } from "../Layout";
 
-const stories = storiesOf("Tooltips", module);
+const stories = storiesOf("Toast", module);
 stories.addDecorator(story => {
   return (
     <Box maxWidth="lg" mx="auto" mt={6} p={6}>
@@ -13,10 +13,26 @@ stories.addDecorator(story => {
   );
 });
 
-stories.add("Default", () => (
-  <Tooltip label="Welcome home" placement="right" closeOnClick>
-    <Button variant="solid" color="blue">
-      Close
-    </Button>
-  </Tooltip>
-));
+stories.add("Toast", () => {
+  const Toaster = () => {
+    const toast = useToast();
+    return (
+      <Button
+        onClick={() =>
+          toast({
+            title: "My primary message for the user.",
+            duration: 5000,
+            position: "top",
+            subtitle: "Details to report to the user.",
+            variant: "solid",
+            status: "success"
+          })
+        }
+      >
+        Show Toast
+      </Button>
+    );
+  };
+
+  return <Toaster />;
+});

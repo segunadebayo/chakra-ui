@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { Children, cloneElement, forwardRef, useState } from "react";
 import Icon from "../Icon";
 import { genId } from "../utils";
-import { useMenuContext } from "./Menu";
+import { useMenuContext } from ".";
 import { MenuGroup } from "./MenuGroup";
 import { useMenuItemStyle } from "./MenuItem";
 import Flex from "../Flex";
@@ -18,8 +18,7 @@ export const MenuItemOption = forwardRef(
       type,
       onBlur,
       onFocus,
-      css,
-      "aria-checked": ariaChecked,
+      isChecked,
       ...props
     },
     ref
@@ -59,19 +58,18 @@ export const MenuItemOption = forwardRef(
       focusAtIndex(-1);
     };
 
-    const menuItemStyle = useMenuItemStyle();
+    const styleProps = useMenuItemStyle();
 
     return (
       <Flex
         ref={ref}
-        css={[menuItemStyle, css]}
         as="button"
         minHeight="32px"
         alignItems="center"
         onClick={onClick}
         role={role}
         tabIndex={-1}
-        aria-checked={ariaChecked}
+        aria-checked={isChecked}
         disabled={isDisabled}
         aria-disabled={isDisabled ? "" : undefined}
         onMouseEnter={onMouseEnter}
@@ -79,17 +77,20 @@ export const MenuItemOption = forwardRef(
         onBlur={onBlur}
         onFocus={onFocus}
         onKeyDown={onKeyDown}
+        {...styleProps}
         {...props}
       >
-        <Box size="1em" ml="16px" mr="-4px" aria-hidden>
-          <Icon
-            name="check"
-            color="currentColor"
-            size="1em"
-            data-menuitem-icon=""
-          />
-        </Box>
-        <Box textAlign="left" as="span" mx="16px" flex="1">
+        <Icon
+          name="check"
+          opacity={isChecked ? 1 : 0}
+          color="currentColor"
+          size="1em"
+          ml="1rem"
+          mr="-4px"
+          aria-hidden
+          data-menuitem-icon=""
+        />
+        <Box textAlign="left" as="span" mx="1rem" flex="1">
           {children}
         </Box>
       </Flex>
@@ -137,11 +138,11 @@ export const MenuOptionsGroup = ({
           type === "radio"
             ? {
                 name: name || genId("radio"),
-                "aria-checked": child.props.value === value
+                isChecked: child.props.value === value
               }
             : {
                 name: child.props.name,
-                "aria-checked": value.includes(child.props.value)
+                isChecked: value.includes(child.props.value)
               };
         return cloneElement(child, {
           type,

@@ -1,10 +1,15 @@
 import { ReactNode, FC } from "react";
 import { BoxProps } from "../Box";
+import { PseudoBoxProps } from "../PseudoBox";
 
-interface IEditableText {
-  /** Text value of the controlled input */
+interface IEditable {
+  /**
+   * Text value of the controlled input
+   */
   value?: string;
-  /** Default text value of uncontrolled input. */
+  /**
+   * Default text value of uncontrolled input.
+   */
   defaultValue?: string;
   /**
    * Whether the text can be edited.
@@ -17,13 +22,21 @@ interface IEditableText {
    * @default false
    */
   isEditing?: boolean;
-  /** Callback invoked when user changes input in any way.  */
+  /**
+   * Callback invoked when user changes input in any way.
+   */
   onChange?: () => void;
-  /** Callback invoked when user cancels input with the `Esc` key. Receives last confirmed value. */
+  /**
+   * Callback invoked when user cancels input with the `Esc` key. Receives last confirmed value.
+   */
   onCancel?: () => void;
-  /** Callback invoked when user confirms value with `enter` key or by blurring input. */
+  /**
+   * Callback invoked when user confirms value with `enter` key or by blurring input.
+   */
   onSubmit?: () => void;
-  /** Callback invoked after the user enters edit mode. */
+  /**
+   * Callback invoked after the user enters edit mode.
+   */
   onEdit?: () => void;
   /**
    * If `true`, the input's text will be highlighted on focus.
@@ -42,12 +55,12 @@ interface IEditableText {
   children: ReactNode;
 }
 
-export type EditableTextProps = IEditableText & BoxProps;
+export type EditableProps = IEditable & BoxProps;
 
-export const EditablePreview: FC<BoxProps>;
+export const EditablePreview: FC<PseudoBoxProps>;
 
-export const EditableInput: FC<BoxProps>;
+export const EditableInput: FC<PseudoBoxProps>;
 
-declare const EditableText: FC<EditableTextProps>;
+declare const Editable: FC<EditableProps>;
 
-export default EditableText;
+export default Editable;

@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { oneOf } from "prop-types";
-import { useUIMode } from "../ThemeProvider";
-import { DrawerTransition, DrawerOverlay, DrawerContent } from "./components";
+import { DrawerContent, DrawerOverlay, DrawerTransition } from "./components";
 
 const Drawer = ({
   isOpen,
@@ -14,7 +13,6 @@ const Drawer = ({
   hideOverlay,
   placement = "right"
 }) => {
-  const { mode } = useUIMode();
   return (
     <DrawerTransition {...{ isOpen, placement, isFullHeight }}>
       {({ styles, transform, placements }) => (
@@ -25,7 +23,6 @@ const Drawer = ({
           css={{ opacity: styles.opacity }}
         >
           <DrawerContent
-            mode={mode}
             css={theme => ({
               maxWidth: theme.sizes[size],
               position: "fixed",
@@ -60,3 +57,4 @@ Drawer.propTypes = {
 
 export default Drawer;
 export * from "./components";
+
