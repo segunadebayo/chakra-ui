@@ -11,7 +11,6 @@ const Input = forwardRef((props, ref) => {
     size,
     as,
     "aria-label": ariaLabel,
-    isFocused,
     isReadOnly,
     onFocus,
     onBlur,
