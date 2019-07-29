@@ -3,9 +3,9 @@ import { FC } from "react";
 
 interface IHeading {
   /**
-   * Size of the Heading.
+   * The size of the Heading.
    */
-  size: "2xl" | "xl" | "lg" | "md" | "sm" | "xs";
+  size?: "2xl" | "xl" | "lg" | "md" | "sm" | "xs";
 }
 
 export type HeadingProps = IHeading & BoxProps;

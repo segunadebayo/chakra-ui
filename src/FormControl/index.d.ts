@@ -12,27 +12,27 @@ interface IFormControl {
   /**
    * Id of the form control.
    */
-  id: string;
+  id?: string;
   /**
    * Name of the form control.
    */
-  name: string;
+  name?: string;
   /**
    * Content of the form control.
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * If `true` set the form control to the invalid state.
    */
-  isInvalid: boolean;
+  isInvalid?: boolean;
   /**
    * If `true` set the form control to be required.
    */
-  isRequired: boolean;
+  isRequired?: boolean;
   /**
    * If `true` set the form control to the disabled state.
    */
-  isDisabled: boolean;
+  isDisabled?: boolean;
 }
 
 export type FormControlProps = IFormControl & BoxProps;
