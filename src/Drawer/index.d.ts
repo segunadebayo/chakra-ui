@@ -35,6 +35,20 @@ interface IDrawer {
   placement: "top" | "left" | "bottom" | "right";
 }
 
+interface IDrawerTransition {
+  isOpen: boolean;
+  children: ReactNode;
+  duration: number;
+  placement: string;
+  isFullHeight: boolean;
+}
+
 export type DrawerProps = IDrawer;
 
+export type DrawerTransitionProps = IDrawerTransition
+
 declare const Drawer: FC<DrawerProps>;
+
+export const DrawerTransition: FC<DrawerTransitionProps>;
+
+export default Drawer;
