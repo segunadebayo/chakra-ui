@@ -9,16 +9,11 @@ import useInputStyle from "./styles";
 const Input = forwardRef((props, ref) => {
   const {
     size,
+    variant,
     as,
     "aria-label": ariaLabel,
     isReadOnly,
-    onFocus,
-    onBlur,
-    onChange,
-    onKeyDown,
-    onKeyUp,
     _focusBorderColor,
-    variant,
     ...rest
   } = props;
 
@@ -37,16 +32,6 @@ const Input = forwardRef((props, ref) => {
       as={as}
       name={name}
       id={id}
-      onFocus={event => {
-        if (_ref.current && isReadOnly) {
-          _ref.current.select();
-        }
-        onFocus && onFocus(event);
-      }}
-      onBlur={onBlur}
-      onChange={onBlur}
-      onKeyDown={onKeyDown}
-      onKeyUp={onKeyUp}
       readOnly={isReadOnly}
       disabled={isDisabled}
       aria-label={ariaLabel}

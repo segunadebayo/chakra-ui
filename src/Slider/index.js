@@ -8,7 +8,7 @@ import {
   createContext,
   useContext
 } from "react";
-import { Box } from "../Layout";
+import Box from "../Box";
 import useSliderStyle from "./styles";
 import PseudoBox from "../PseudoBox";
 import { mergeRefs } from "../utils";
@@ -27,7 +27,7 @@ function makeValuePrecise(value, step) {
   return Number(value.toFixed(stepPrecision));
 }
 
-function roundValueToStep(value, step) {
+export function roundValueToStep(value, step) {
   return makeValuePrecise(Math.round(value / step) * step, step);
 }
 

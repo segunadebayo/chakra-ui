@@ -1,44 +1,69 @@
+import {
+  ReactElement,
+  RefAttributes,
+  InputHTMLAttributes,
+  ForwardRefExoticComponent,
+  ElementType
+} from "react";
 import { PseudoBoxProps } from "../PseudoBox";
-import { ForwardRefExoticComponent, RefAttributes, ReactElement } from "react";
 
-interface IInput {
+interface IProps {
   /**
-   * If `true` sets the input to readonly state
+   * If `true`, the input will be disabled.
+   * This sets `aria-disabled=true` and you can style this state by passing `_disabled` prop
    */
-  isReadOnly?: boolean;
+  isDisabled: boolean;
   /**
-   * The aria-label of the input.
+   * If `true`, the `input` will indicate an error. @
+   * This sets `aria-invalid=true` and you can style this state by passing `_invalid` prop
+   *
    */
-  "aria-label"?: string;
+  isInvalid: boolean;
   /**
-   * The size of the input.
-   * Possible values: `md`, `sm` or `lg`
+   * If `true`, the input element will be required.
    */
-  size?: "md" | "sm" | "lg";
+  isRequired: boolean;
   /**
-   * The size of the input.
+   * The id of the `input` element.
    */
-  as?: string | React.ReactElement;
+  id: string;
   /**
-   * The type of the input
+   * The name attribute of the `input` element.
    */
-  type?: "text" | "email" | "number" | "password" | "search";
+  name: string;
   /**
-   * The state of the input.
-   * Possible values: `success`, `error` or `warning`.
+   * The visual size of the `input` element.
    */
-  state?: "success" | "error" | "warning";
+  size: "sm" | "md" | "lg";
   /**
-   * The variant of the input.
-   * Possible values: `outline`, `unstyled`, `flushed` or `filled`.
+   * The variant of the input style to use.
    */
-  variant?: "outline" | "unstyled" | "flushed" | "filled";
+  variant: "outline" | "unstyled" | "flushed" | "filled";
+  /**
+   * The component to use in place of `input`
+   */
+  as: ElementType;
+  /**
+   * Accessibility label to use, in scenarios where the input as no visible label
+   * A11y: It's useful for screen readers
+   */
+  "aria-label": ariaLabel;
+  /**
+   * If `true`, the input is perceivable but it's value can't be changes.
+   */
+  isReadOnly: boolean;
+  /**
+   * The border color when the input is focused.
+   * Use color keys in `theme.colors`
+   * @example
+   * _focusBorderColor = "blue"
+   */
+  _focusBorderColor: string;
 }
 
-export type InputProps = IInput &
+export type InputProps = IProps &
   PseudoBoxProps &
-  React.HTMLAttributes<{}> &
-  RefAttributes<HTMLDivElement>;
+  RefAttributes<HTMLInputElement>;
 
 declare const Input: ForwardRefExoticComponent<InputProps>;
 
