@@ -29,7 +29,7 @@ To start using the components, please follow these steps:
 1. Wrap your application in a `ThemeProvider` provded by **chakra-ui**
 
 ```jsx
-import { ThemeProvider, ColorModeProvider } from "fannypack";
+import { ThemeProvider, ColorModeProvider } from "chakra-ui";
 
 const App = () => (
   <ThemeProvider>
